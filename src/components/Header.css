@@ -1,0 +1,215 @@
+
+/* Header layout */
+.college-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 3%;
+  background: #fff;
+  min-height: 145px;
+}
+
+.college-logo {
+  flex: 0 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.college-logo img {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+}
+
+.college-info {
+  flex: 1;
+  text-align: center;
+}
+
+.sanstha-name {
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.college-name {
+  color: #c00000;
+  font-size: 27px;
+  font-weight: 800;
+  margin: 4px 0;
+}
+
+.college-address {
+  color: #333;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.college-approval {
+  color: #333;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.official-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex: 0 0 180px;
+}
+
+.official-logos img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+/* Blue navigation */
+.main-navbar {
+  background: #07549a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 16px 17px;
+  transition: background 0.3s;
+}
+
+.main-navbar a:hover {
+  background: #003565;
+}
+
+/* Latest news */
+.news-bar {
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  background: white;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+.news-label {
+  background: #c00000;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.news-window {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.news-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  white-space: nowrap;
+  animation: scroll-news 32s linear infinite;
+}
+
+.news-item {
+  color: #222;
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.news-dot {
+  color: #c00000;
+  padding: 0 20px;
+}
+
+.news-window:hover .news-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-news {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile display */
+@media (max-width: 700px) {
+  .college-header {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .college-logo {
+    flex-basis: 60px;
+  }
+
+  .college-logo img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .college-name {
+    font-size: 17px;
+  }
+
+  .sanstha-name {
+    font-size: 12px;
+  }
+
+  .college-address,
+  .college-approval {
+    font-size: 10px;
+  }
+
+  .official-logos {
+    flex-basis: 42px;
+  }
+
+  .official-logos img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .main-navbar a {
+    padding: 12px 9px;
+    font-size: 12px;
+  }
+
+  .news-label {
+    padding: 0 9px;
+    font-size: 11px;
+  }
+
+  .news-item {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .news-track {
+    animation: none;
+  }
+}
