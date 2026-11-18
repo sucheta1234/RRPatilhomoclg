@@ -27,7 +27,7 @@ export default function Header() {
           </h3>
 
           <h1 className="college-name">
-            NAME OF MEDICAL COLLEGE
+            R. R. Patil Homoeopathy Collge Sangli
           </h1>
 
           <p className="college-address">
